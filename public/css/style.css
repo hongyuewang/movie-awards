@@ -5,3 +5,18 @@ body {
 #movies img {
     width: 100%;
 }
+
+#nominations img {
+    width: 100%;
+}
+
+#movies {
+    width: 50%;
+    float: left;
+}
+
+
+#nominations {
+    width: 50%;
+    float: right;
+}
