@@ -23,7 +23,7 @@ function getMovies(searchText) {
                 <div class="well text-center">
                     <img src="${movie.Poster}">
                     <h5 class="movie-title">${movie.Title}</h5>
-                    <a onclick="nominate('${movie.imdbID}')" class= "btn btn-primary" href="#">Nominate</a>
+                    <a onclick="nominate('${movie.imdbID}')" class= "btn btn-primary btn-block" href="#">Nominate</a>
                 </div>
             </div>
             `;
@@ -38,8 +38,6 @@ function getMovies(searchText) {
 
 function nominate(movieID) {
     nominationList.push(movieID);
-    console.log(nominationList);
-    console.log(nominationList.length);
     getNominations(nominationList);
 }
 
@@ -55,7 +53,7 @@ function getNominations(list) {
                     <div class="well text-center">
                         <img src="${movie.Poster}">
                         <h5 class="movie-title">${movie.Title}</h5>
-                        <a onclick="remove('${movie}')" class= "btn btn-primary" href="#">Remove</a>
+                        <a onclick="remove('${movie.imdbID}')" class= "btn btn-primary btn-block" href="#">Remove</a>
                     </div>
                 </div>
                 `;
@@ -63,4 +61,14 @@ function getNominations(list) {
             $('#nominations').html(output);
         });
     });
+    if (list.length == 0) {
+            $('#nominations').empty();
+        }
+}
+
+function remove(movieID) {
+    let pos = nominationList.findIndex(element => element.imdbID == movieID);
+    nominationList.splice(pos, 1);
+    console.log(nominationList.length);
+    getNominations(nominationList);
 }

@@ -47,6 +47,8 @@ h5 {
     bottom: 6em;
     left: 0;
     right: 0;
+    white-space: normal !important;
+    word-wrap: break-word;
 }
 
 #movies-header, #nominations-header {
