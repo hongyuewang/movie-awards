@@ -1,7 +1,7 @@
 nominationList = [];
 
 $(document).ready( () => {
-    $('#searchForm').on('submit', (e) => {
+    $('#searchForm').on('keyup', (e) => {
         document.getElementById("movies-header").innerHTML = "Results";
         document.getElementById("nominations-header").innerHTML = "Nominations";
         let searchText = $('#searchText').val();
@@ -62,8 +62,14 @@ function getNominations(list) {
         });
     });
     if (list.length == 0) {
-            $('#nominations').empty();
-        }
+        $('#nominations').empty();
+    } else if (list.length == 5) {
+        // Create banner
+
+    } else {
+        return;
+    }
+
 }
 
 function remove(movieID) {
