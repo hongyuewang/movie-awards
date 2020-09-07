@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.banner-movie {
+    height: 15em;
+    width: 10em;
+    margin: 0 auto;
+}
+
+.jumbotron {
+    width: 100vw;
+}
+
+.display-4 {
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+}
+
+.banner-movie img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#banner-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

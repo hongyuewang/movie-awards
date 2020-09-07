@@ -10,9 +10,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/banner.css">
 
-    <!-- Icon Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-default">
@@ -22,10 +21,10 @@
             </div>
         </div>
     </nav>
-    <header>Your Nominations</header>
-    <div class="container">
-        <div class="jumbotron">
-
+    <div class="container" id="banner-container">
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-4">Your nominations</h1>
+            <div id="banner-nominations" class="row align-items-end"></div>
         </div>
     </div>
     <!-- JQuery -->
@@ -36,5 +35,6 @@
 
     <!-- Custom JavaScript -->
     <script type="text/javascript" src="script/main.js"></script>
+    <script type="text/javascript" src="script/banner.js"></script>
 </body>
 </html>

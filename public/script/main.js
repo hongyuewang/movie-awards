@@ -1,4 +1,4 @@
-nominationList = [];
+let nominationList = [];
 searchText = '';
 
 $(document).ready( () => {
@@ -77,6 +77,8 @@ function getNominations(list) {
     if (list.length == 0) {
         $('#nominations').empty();
     } else if (list.length == 5) {
+        // Store nomination list
+        localStorage.setItem("nominations", nominationList);
         // Create banner
         location.replace("../banner.html");
 
