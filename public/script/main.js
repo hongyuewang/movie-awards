@@ -14,7 +14,7 @@ $(document).ready( () => {
 function getMovies(searchText) {
     // Make request to OMDB API
     const apiKey = 'd57fefb0';
-    axios.get('http://www.omdbapi.com?s='+ searchText + '&apikey=' + apiKey).then((response) => {
+    axios.get('https://www.omdbapi.com?s='+ searchText + '&apikey=' + apiKey).then((response) => {
         console.log(response);
         let movies = response.data.Search;
         let output = '';
@@ -58,7 +58,7 @@ function getNominations(list) {
     const apiKey = 'd57fefb0';
     let output = '';
     $.each(list, (index, id) => {
-        axios.get('http://www.omdbapi.com?i='+ id + '&apikey=' + apiKey).then((response) => {
+        axios.get('https://www.omdbapi.com?i='+ id + '&apikey=' + apiKey).then((response) => {
             console.log(response);
             let movie = response.data;
             output += `

@@ -5,7 +5,7 @@ console.log(nominationList);
 const apiKey = 'd57fefb0';
 let output = '';
 $.each(nominationList, (index, id) => {
-    axios.get('http://www.omdbapi.com?i='+ id + '&apikey=' + apiKey).then((response) => {
+    axios.get('https://www.omdbapi.com?i='+ id + '&apikey=' + apiKey).then((response) => {
         console.log(response);
         let movie = response.data;
         output += `
