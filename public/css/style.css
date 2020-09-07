@@ -29,6 +29,12 @@ h5 {
     letter-spacing: 0.1em;
 }
 
+.nav-link {
+    display: inline;
+    position: relative;
+    left: 150%;
+}
+
 .movie-title {
     margin: 1.5em 0em;
 }
